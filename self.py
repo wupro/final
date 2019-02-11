@@ -1,25 +1,25 @@
 import lineX
 from lineX import *
 from akad.ttypes import *
-from thrift.Thrift import *
-from thrift.TMultiplexedProcessor import *
-from thrift.TSerialization import *
-from thrift.TRecursive import *
-from thrift import transport, protocol, server
+#from thrift.Thrift import *
+#from thrift.TMultiplexedProcessor import *
+#from thrift.TSerialization import *
+#from thrift.TRecursive import *
+#from thrift import transport, protocol, server
 from multiprocessing import Pool, Process
 from akad.ttypes import ContentType as Type
 from akad.ttypes import ChatRoomAnnouncementContents
 from akad.ttypes import Location
 from akad.ttypes import ChatRoomAnnouncement
-from datetime import datetime
+#from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess,asyncio
 from datetime import datetime, timedelta
 from time import sleep
 from bs4 import BeautifulSoup
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse,youtube_dl,pafy,timeit,atexit,traceback,ffmpy,humanize
-from gtts import gTTS
-from googletrans import Translator
+#from gtts import gTTS
+#from googletrans import Translator
 _session = requests.session()
 botStart = time.time()
 sett = codecs.open("set.json","r","utf-8")
@@ -35,28 +35,12 @@ meProfile = me.getProfile()
 meSettings = me.getSettings()
 # BATAS MID
 meM = me.getProfile().mid
-Bt = [meM]
-all = [me]
 OWNER = ["u0ac948397fbc732bd3bc5ca273faa698"]
-oaBot = ["ub0842532a31b9d99856cf2590b17d33f","udfaf52176415b46cb445ae2757ec85f3","u17a086ccff618e754588a1108335867f","uc8dc5352066b6a344bde3c07b0fe04ea","ub9c30fd47257ec4337ee777657b4df66"]
 chim = "uc8dc5352066b6a344bde3c07b0fe04ea"
 St = set["stile"]
-tz = pytz.timezone("Asia/Jakarta")
+tz = pytz.timezone("Asia/Taipei")
 timeNow = datetime.now(tz=tz)
 jam = "『 " + timeNow.strftime('%H:%M:%S') + " 』"
-for bots in all:
-  for addbot in Bt:
-    try:
-      bots.findAndAddContactsByMid(addbot)
-    except:pass
-  for addoa in oaBot:
-    try:
-      bots.findAndAddContactsByMid(addoa)
-    except:pass
-  for admin in set["admin"]:
-    try:
-      bots.findAndAddContactsByMid(admin)
-    except:pass
 def backupData():
   try:
     backup = set
@@ -149,7 +133,7 @@ def bot(op):
                       "imageUrl": url1,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -162,7 +146,7 @@ def bot(op):
                       "imageUrl": url2,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -175,7 +159,7 @@ def bot(op):
                       "imageUrl": url3,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -188,7 +172,7 @@ def bot(op):
                       "imageUrl": url4,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -201,7 +185,7 @@ def bot(op):
                       "imageUrl": url5,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -214,7 +198,7 @@ def bot(op):
                       "imageUrl": url6,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -227,7 +211,7 @@ def bot(op):
                       "imageUrl": url7,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -240,7 +224,7 @@ def bot(op):
                       "imageUrl": url8,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -253,7 +237,7 @@ def bot(op):
                       "imageUrl": url9,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -266,7 +250,7 @@ def bot(op):
                       "imageUrl": url10,
                       "action": {
                         "type": "uri",
-                        "uri": "line://ti/p/~adiputra.95",
+                        "uri": "line://ti/p/~",
                         "area": {
                           "x": 447,
                           "y": 356,
@@ -343,7 +327,7 @@ def bot(op):
                     "imageUrl": "https://os.line.naver.jp/os/p/{}".format(ids.mid),
                     "action": {
                       "type": "uri",
-                      "uri": "http://line.me/ti/p/~adiputra.95"
+                      "uri": "http://line.me/ti/p/~"
                       }
                     }
                   )
@@ -525,7 +509,7 @@ def bot(op):
                   "aspectMode": "cover",
                   "action": {
                     "type": "uri",
-                    "uri": "https://line.me/ti/p/~adiputra.95"
+                    "uri": "https://line.me/ti/p/~"
                   }
                 },
                 "body": {
@@ -534,7 +518,7 @@ def bot(op):
                   "spacing": "md",
                   "action": {
                     "type": "uri",
-                    "uri": "https://line.me/ti/p/~adiputra.95"
+                    "uri": "https://line.me/ti/p/~"
                   },
                   "contents": [
                     {
